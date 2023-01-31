@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&display=swap');
+
+:root {
+   --primary-clr: hsl(158, 36%, 37%);
+   --secondary-clr: hsl(30, 38%, 92%);
+   --third-clr: hsl(212, 21%, 14%);
+   --fourth-clr: hsl(228, 12%, 48%);
+   --fifth-clr: hsl(0, 0%, 100%);
+
+   --ff-accent: 'Fraunces', serif;
+   --ff-base: 'Montserrat', sans-serif;
+}
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+/*
+  3. Allow percentage-based heights in the application
+*/
+html, body {
+  height: 100%;
+}
+/*
+  Typographic tweaks!
+  4. Add accessible line-height
+  5. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+  6. Improve media defaults
+*/
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+  7. Remove built-in form typography styles
+*/
+input, button, textarea, select {
+  font: inherit;
+}
+/*
+  8. Avoid text overflows
+*/
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+/* General styling */
+body {
+  font-family: var(--ff-base);
+  font-size: 14px;
+  background-color: hsl(30, 38%, 92%);
+  color: var(--fourth-clr);
+  display: grid;
+  place-content: center;
+  margin: 1rem;
+}
+
+.product {
+  display: grid;
+  background: var(--fifth-clr);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  max-width: 600px;
+}
+
+@media (min-width: 600px){
+  .product {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.product-content {
+  padding: 1.5rem;
+  display: grid;
+  grid-gap: 1rem;
+}
+
+.product-category {
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  color: --third-clr;
+  margin-top: 10px;
+}
+
+.product-title {
+  color: var(--third-clr);
+  font-size: 30px;
+  font-weight: 700;
+  font-family: var(--ff-accent);
+  line-height: 1;
+}
+
+.product-price-section{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  justify-items: center;
+  align-items: center;
+}
+
+.product-reduce {
+  font-family: var(--ff-accent);
+  font-size:  35px;
+  font-weight: 700;
+  color: var(--primary-clr);
+}
+
+.product-price {
+  text-decoration: line-through;
+}
+
+button {
+  border-radius: 5px;
+  border: 0;
+  display: inline-flex;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5em 1.5em;
+  height: 50px;
+  cursor: pointer;
+  color: var(--fifth-clr);
+  background-color: var(--primary-clr);
+  transition: background-color 0.5s ease-in;
+}
+
+button:hover {
+  background-color: rgb(6, 51, 6);
+
+}
